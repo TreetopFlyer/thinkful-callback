@@ -1,3 +1,6 @@
+var Emitter = require('./emitter');
+
+
 
 function Progress(){
 
@@ -9,7 +12,7 @@ function Progress(){
     this.timeDelay = 300;
     this.timeDeviation = 250;
 }
-
+Progress.prototype.constructor = Object.create(Emitter.prototype);
 Progress.prototype.timeUpdate = function(){
     var delay;
     delay = this.timeDelay + this.timeDeviation * (Math.random()*2 - 1);
