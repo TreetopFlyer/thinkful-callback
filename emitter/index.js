@@ -1,6 +1,7 @@
 function Emitter(){
     this.listeners = {};
 }
+Emitter.prototype.constructor = Emitter;
 Emitter.prototype.on = function(inType, inCallback){
     var type;
     
